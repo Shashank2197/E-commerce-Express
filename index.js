@@ -8,7 +8,8 @@ const mongoose = require("mongoose");
 const port = 3031;
 const config = require("./config");
 
-const postsRouter = require("./routes/posts");
+require("./app/routes/auth.routes")(app);
+require("./app/routes/user.routes")(app);
 
 app.use(logger("dev"));
 const db = require("./app/models");
